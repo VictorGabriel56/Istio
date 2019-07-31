@@ -9,9 +9,9 @@ spec:
   externalTrafficPolicy: Local
   ports:
   - name: http
-    port: 800
+    port: 32210
     protocol: TCP
-    targetPort: 800
+    targetPort: 32210
   selector:
     app: nginx
   type: NodePort
@@ -42,4 +42,4 @@ spec:
       - name: nginx
         image: nginx
         ports:
-        - containerPort: 800
+        - containerPort: 32210
