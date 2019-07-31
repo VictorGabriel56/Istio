@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-v2
   namespace: istio-system
   labels:
     app: nginx
@@ -12,13 +12,11 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      version: v2
   replicas: 3 # tells deployment to run 1 pods matching the template
   template: # create pods using pod definition in this template
     metadata:
       labels:
         app: nginx
-        version: v2
     spec:
       containers:
       - name: nginx
