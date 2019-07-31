@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: nginx
   namespace: istio-system
+  labels:
+    app: nginx
+    version: v2
 spec:
   strategy:
     type: Recreate
