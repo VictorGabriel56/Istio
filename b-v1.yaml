@@ -34,7 +34,6 @@ spec:
       version: v1
   template:
     metadata:
-    namespace: istio-system
       labels:
         app: productpage
         version: v1
