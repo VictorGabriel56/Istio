@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: productpage-v2
+  namespace: istio-system
   labels:
     app: productpage
     version: v2
