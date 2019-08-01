@@ -9,8 +9,6 @@ spec:
   ports:
   - name: http
     port: 32210
-    protocol: TCP
-    targetPort: 32210
   selector:
     app: nginx
   type: NodePort
@@ -39,3 +37,5 @@ spec:
       containers:
       - name: nginx
         image: nginx
+        ports:
+        - containerPort: 32210        
