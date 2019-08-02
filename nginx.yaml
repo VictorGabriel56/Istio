@@ -5,11 +5,10 @@ metadata:
   labels:
     app: nginx
 spec:
-  externalTrafficPolicy: Local
   ports:
   - name: http
-    port: 32210
-    targetport: 32210
+    port: 80
+    targetport: 80
   selector:
     app: nginx
 ---
@@ -38,4 +37,4 @@ spec:
       - name: nginx
         image: nginx
         ports:
-        - containerPort: 32210        
+        - containerPort: 80        
